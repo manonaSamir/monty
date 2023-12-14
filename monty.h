@@ -52,5 +52,5 @@ void pint(stack_t **stack, unsigned int line);
 void pop(stack_t **stack, unsigned int line);
 void swap(stack_t **stack, unsigned int line);
 void checks_stack(stack_t **stack, char *opcode, int line);
-
+void add(stack_t **stack, unsigned int line);
 #endif
