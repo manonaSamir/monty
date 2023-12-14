@@ -22,7 +22,8 @@ void (*opcode_func(char *s))(stack_t **stack, unsigned int line)
 		{"mod", mod},
 		{"pchar", pchar},
 		{"pstr", pstr},
-
+		{"rotl", rotl},
+		{"rotr", rotr},
 	};
 	int i;
 
