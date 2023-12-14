@@ -202,3 +202,26 @@ void mod(stack_t **stack, unsigned int line)
 	p->n = (p->n) % top;
 	pop(stack, 0);
 }
+
+/**
+ * pchar - prints the integer at the top of the stack as ascii value
+ * @stack: a pointer to the stack
+ * @line: the line number of operation
+ */
+void pchar(stack_t **stack, unsigned int line)
+{
+	int c;
+
+	if (stack == NULL || *stack == NULL)
+	{
+		fprintf(stderr, "L%i: can't pchar, stack empty\n", line);
+		exit(EXIT_FAILURE);
+	}
+	c = (*stack)->n;
+	if (c < 0 || c > 127)
+	{
+		fprintf(stderr, "L%i: can't pchar, value out of range\n", line);
+		exit(EXIT_FAILURE);
+	}
+	printf("%c\n", c);
+}
