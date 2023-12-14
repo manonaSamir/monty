@@ -179,3 +179,26 @@ void mul(stack_t **stack, unsigned int line)
 	p->n = (p->n) * (p->prev)->n;
 	pop(stack, 0);
 }
+
+/**
+ * mod - computes the rest of the division of the second top element
+ * by the top element of the stack
+ * @stack: a pointer to the stack
+ * @line: the line number to the operation
+ */
+void mod(stack_t **stack, unsigned int line)
+{
+	stack_t *p = *stack;
+	int top;
+
+	checks_stack(stack, "mod", line);
+	top = p->n;
+	if (top == 0)
+	{
+		fprintf(stderr, "L%i: division by zero\n", line);
+		exit(EXIT_FAILURE);
+	}
+	p = p->next;
+	p->n = (p->n) % top;
+	pop(stack, 0);
+}

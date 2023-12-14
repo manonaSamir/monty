@@ -19,6 +19,7 @@ void (*opcode_func(char *s))(stack_t **stack, unsigned int line)
 		{"sub", sub},
 		{"div", M_div},
 		{"mul", mul},
+		{"mod", mod},
 
 	};
 	int i;
