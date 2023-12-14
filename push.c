@@ -26,7 +26,7 @@ void push(stack_t **tops, unsigned int n)
 
 /**
  * pall - prints the stack
- * @tops: a pointer to the stack
+ * @stack: a pointer to the stack
  * @line: the line number of the operation
  */
 void pall(stack_t **stack, unsigned int line __attribute__((unused)))

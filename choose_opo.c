@@ -10,23 +10,7 @@ void (*opcode_func(char *s))(stack_t **stack, unsigned int line)
 {
 	instruction_t codes[] = {
 		{"push", push},
-		/* {"pop", pop},
-		{"pint", pint},*/
 		{"pall", pall},
-		/* {"swap", swap},
-		 {"add", add},
-		 {"nop", nop},
-		{"sub", sub},
-		 {"div", div_f},
-		{"mul", mul},
-		 {"mod", mod},
-		 {"pchar", pchar},
-		 {"pstr", pstr},
-		{"rotl", rotl},
-		{"rotr", rotr},
-		 {"stack", stack},
-		{"queue", queue},
-		{NULL, NULL}*/
 	};
 	int i;
 
