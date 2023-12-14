@@ -81,3 +81,19 @@ void pop(stack_t **stack, unsigned int line)
 	if (*stack)
 		(*stack)->prev = NULL;
 }
+
+/**
+ * swap - swaps the top 2 element of the stack
+ * @stack: a pointer to the top of the stack
+ * @line: the line number of the operation
+ */
+void swap(stack_t **stack, unsigned int line)
+{
+	int tmp;
+	stack_t *p = *stack;
+
+	checks_stack(stack, "swap", line);
+	tmp = p->n;
+	p->n = (p->next)->n;
+	(p->next)->n = tmp;
+}
