@@ -113,3 +113,13 @@ void add(stack_t **stack, unsigned int line)
 	(p->next)->n = sum;
 	pop(stack, 0);
 }
+
+/**
+ * nop - doesn't do anything
+ * @stack: a pointer to the stack
+ * @line: line number of operation
+ */
+void nop(stack_t **stack __attribute__((unused)),
+		 unsigned int line __attribute__((unused)))
+{
+}

@@ -53,4 +53,6 @@ void pop(stack_t **stack, unsigned int line);
 void swap(stack_t **stack, unsigned int line);
 void checks_stack(stack_t **stack, char *opcode, int line);
 void add(stack_t **stack, unsigned int line);
+void nop(stack_t **stack __attribute__((unused)),
+		 unsigned int line __attribute__((unused)));
 #endif
