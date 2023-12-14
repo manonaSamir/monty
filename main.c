@@ -1,7 +1,6 @@
 #include "monty.h"
 #define BUFFERSIZE 1024
 
-int is_stack = 1;
 /**
  * main - entry point of the program
  * an interpeter for monty files
@@ -125,8 +124,8 @@ void run(char **ops, stack_t **stack, unsigned int line_number)
 			free_arr(ops);
 			exit(EXIT_FAILURE);
 		}
-		if (is_stack)
-			push(stack, n);
+
+		push(stack, n);
 	}
 	else
 	{
