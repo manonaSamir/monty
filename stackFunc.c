@@ -225,3 +225,28 @@ void pchar(stack_t **stack, unsigned int line)
 	}
 	printf("%c\n", c);
 }
+
+/**
+ * pstr - prints each element in the stack in a string (if it's in ascii table)
+ * @stack: a pointer to the stack
+ * @line: the line number of the operation
+ */
+void pstr(stack_t **stack, unsigned int line __attribute__((unused)))
+{
+	stack_t *p = *stack;
+	int c;
+
+	while (p)
+	{
+		c = p->n;
+		if (c > 0 && c <= 127)
+		{
+			printf("%c", c);
+		}
+		else
+			break;
+		p = p->next;
+	}
+
+	printf("\n");
+}
