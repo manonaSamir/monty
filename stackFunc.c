@@ -58,3 +58,26 @@ void pint(stack_t **stack, unsigned int line)
 
 	printf("%i\n", (*stack)->n);
 }
+
+/**
+ * pop - deletes the top of the stack
+ * @stack: a pointer to the stack
+ * @line: the line number of operation
+ */
+void pop(stack_t **stack, unsigned int line)
+{
+	stack_t *p;
+
+	if (stack == NULL || *stack == NULL)
+	{
+		fprintf(stderr, "L%i: can't pop an empty stack\n", line);
+		exit(EXIT_FAILURE);
+	}
+
+	p = *stack;
+
+	*stack = p->next;
+	free(p);
+	if (*stack)
+		(*stack)->prev = NULL;
+}

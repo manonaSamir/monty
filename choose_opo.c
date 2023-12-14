@@ -12,6 +12,7 @@ void (*opcode_func(char *s))(stack_t **stack, unsigned int line)
 		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
+		{"pop", pop},
 	};
 	int i;
 
