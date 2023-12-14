@@ -164,3 +164,18 @@ void M_div(stack_t **stack, unsigned int line)
 	p->n = (p->n) / top;
 	pop(stack, 0);
 }
+
+/**
+ * mul - multiply the top two elements
+ * @stack: a pointer to the stack
+ * @line: the line number of the operation
+ */
+void mul(stack_t **stack, unsigned int line)
+{
+	stack_t *p = *stack;
+
+	checks_stack(stack, "mul", line);
+	p = p->next;
+	p->n = (p->n) * (p->prev)->n;
+	pop(stack, 0);
+}

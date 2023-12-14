@@ -57,5 +57,6 @@ void nop(stack_t **stack __attribute__((unused)),
 		 unsigned int line __attribute__((unused)));
 void sub(stack_t **stack, unsigned int line);
 void M_div(stack_t **stack, unsigned int line);
+void mul(stack_t **stack, unsigned int line);
 
 #endif

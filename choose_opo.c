@@ -18,6 +18,8 @@ void (*opcode_func(char *s))(stack_t **stack, unsigned int line)
 		{"nop", nop},
 		{"sub", sub},
 		{"div", M_div},
+		{"mul", mul},
+
 	};
 	int i;
 
